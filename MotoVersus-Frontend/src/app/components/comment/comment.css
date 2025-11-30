@@ -1,0 +1,20 @@
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* hace los íconos blancos si el fondo es claro */
+  background-size: 40%, 40%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev-icon.bg-dark,
+.carousel-control-next-icon.bg-dark {
+  opacity: 0.8;
+}
+
+.carousel:hover .carousel-control-prev-icon,
+.carousel:hover .carousel-control-next-icon {
+  opacity: 1;
+}

@@ -1,0 +1,20 @@
+@import url('https://fonts.cdnfonts.com/css/badelosh-ralintesla');
+@import url('https://fonts.cdnfonts.com/css/noto-serif-tangut-2');
+                
+:root {
+    --color-fondo:#446FF2;
+    --color-texto:#072359 ;
+    --color-enfasis1: #1D2026 ;
+    --color-enfasis: #4E8AD9;
+    --color-enfasis2: #F2F2F2;
+    --tamaño-titulos: 30px;
+    --texto-secundario: 'Noto Serif Tangut', sans-serif;
+    
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}

@@ -1,0 +1,134 @@
+.banner-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+/* Ajuste de overlay para ocupar todo el alto real del contenedor */
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 20px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.banner-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.btn-danger {
+  background-color: #d32f2f;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #b71c1c;
+  transform: scale(1.05);
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+
+/* MOTOS */
+.container {
+  max-width: 1100px;
+  margin: 3rem auto;
+}
+
+.bg-light {
+  background-color: #f3f3f3 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 3rem 2rem !important;
+  border-radius: 15px;
+}
+
+.moto-img {
+  width: 300px;
+  /* Aumenta el tamaño de las motos */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.moto-img:hover {
+  transform: scale(1.08);
+}
+
+.text-center h6 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #000;
+  margin-bottom: 0.8rem;
+}
+
+.btn-dark {
+  background-color: #000 !important;
+  border: none;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.7rem 2rem !important;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.btn-dark:hover {
+  background-color: #333 !important;
+  transform: scale(1.05);
+}
+
+
+.d-flex {
+  gap: 3rem !important;
+}
+
+
+@media (max-width: 768px) {
+  .d-flex {
+    flex-direction: column;
+    gap: 1.5rem !important;
+  }
+
+  .moto-img {
+    width: 150px;
+  }
+
+  .text-center h6 {
+    font-size: 1rem;
+  }
+
+  .btn-dark {
+    font-size: 0.9rem;
+  }
+}

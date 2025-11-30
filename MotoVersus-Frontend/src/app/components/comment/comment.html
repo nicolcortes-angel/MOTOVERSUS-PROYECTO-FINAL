@@ -1,0 +1,72 @@
+<div id="commentsCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+    <div
+      class="carousel-item"
+      *ngFor="let idx of getSlidesCount(); let first = first"
+      [class.active]="first"
+    >
+      <div class="row justify-content-center gx-5 gy-3">
+        <div class="col-md-4" *ngFor="let comment of commentsList.slice(idx * 3, idx * 3 + 3)">
+          <div class="card shadow-sm border-0 rounded-4 h-100 text-center">
+            <div class="card-body p-4">
+
+              <!-- Imagen del usuario -->
+              <img
+                *ngIf="comment.usuario.fotoPerfil"
+                [src]="baseUrl + comment.usuario.fotoPerfil"
+                alt="Usuario"
+                class="rounded-circle mb-3"
+                width="70"
+                height="70"
+              />
+              <img
+                *ngIf="!comment.usuario.fotoPerfil"
+                src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+                alt="Avatar genérico"
+                class="rounded-circle mb-3"
+                width="70"
+                height="70"
+              />
+
+              <!-- Nombre -->
+              <h5 class="fw-bold mb-0">{{ comment.usuario.nombre }}</h5>
+
+              <!-- Texto del comentario -->
+              <p class="text-secondary fst-italic mt-3">
+                “{{ comment.texto }}”
+              </p>
+
+              <!-- Fecha -->
+              <small class="text-muted d-block mt-2">
+                {{ comment.fecha | date:'longDate' }}
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ✅ Botones de navegación -->
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#commentsCarousel"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#commentsCarousel"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>

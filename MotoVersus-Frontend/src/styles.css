@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.cdnfonts.com/css/badelosh-ralintesla');
+@import url('https://fonts.cdnfonts.com/css/noto-serif-tangut-2');
+                
+:root {
+    
+  /* Colores principales */
+  --color-fondo: #446FF2;        /* Azul principal */
+  --color-texto: #072359;        /* Azul oscuro */
+  --color-enfasis1: #1D2026;     /* Fondo oscuro */
+  --color-enfasis: #4E8AD9;      /* Azul medio */
+  --color-enfasis2: #F2F2F2;     /* Texto claro */
+
+  /* Tonos adicionales */
+  --color-primario-claro: #6E8EFF;   /* Azul más suave */
+  --color-primario-oscuro: #2E4EB8;  /* Azul intenso */
+  --color-acento: #00B8FF;           /* Azul celeste brillante */
+  --color-secundario: #FF6B6B;       /* Coral para contrastes (alertas, botones) */
+  --color-exito: #00C897;            /* Verde menta */
+  --color-advertencia: #FFD93D;      /* Amarillo brillante */
+  --color-error: #FF4D4D;            /* Rojo fuerte */
+ 
+  /*  Sombras y bordes */
+  --sombra-suave: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --sombra-fuerte: 0 4px 15px rgba(0, 0, 0, 0.3);
+  --borde-claro: 1px solid rgba(255, 255, 255, 0.1);
+  --borde-azul: 1px solid rgba(68, 111, 242, 0.4);
+
+  /*  Gradientes */
+  --gradiente-azul: linear-gradient(135deg, #446FF2, #00B8FF);
+  --gradiente-oscuro: linear-gradient(135deg, #1D2026, #072359);
+  --gradiente-coral: linear-gradient(135deg, #FF6B6B, #FFD93D);
+
+  /* Tamaños */
+  --tamaño-titulos: 30px;
+  --tamaño-subtitulo: 22px;
+  --tamaño-texto: 16px;
+  --tamaño-mini: 14px;
+
+  /* Radios y transiciones */
+  --radio-borde: 12px;
+  --radio-grande: 20px;
+  --transicion: all 0.3s ease-in-out;
+
+    --tamaño-titulos: 30px;
+    --texto-secundario: 'Noto Serif Tangut', sans-serif;
+    
+}
+
+

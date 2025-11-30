@@ -1,0 +1,20 @@
+<h1>GESTIÓN DE USUARIOS</h1>
+
+<div class="container border border-black d-flex flex-wrap gap-5 p-4 border-3 rounded-4">
+
+  @for (user of allUsers; track $index) {
+    <div class="usuariod">
+      <h2>{{ user.nombre }}</h2>
+      <p>{{ user.user }}</p>
+      <p>{{ user.correo }}</p>
+
+     
+      <button class="btn btn-danger" (click)="deleteUser(user._id)">Eliminar</button>
+
+      <!-- 🔸 Formulario solo aparece para el usuario seleccionado -->
+      @if (showUpdateForm && selectedUserId === user._id) {
+        <app-update-form-user [userId]="selectedUserId"></app-update-form-user>
+      }
+    </div>
+  }
+</div>

@@ -1,0 +1,37 @@
+<div class="container mt-4 containerprincipal">
+
+  <!-- 🔹 Encabezado con botón para mostrar/ocultar formulario -->
+  <div class="d-flex justify-content-center align-items-center mb-3">
+    <button class="btn btn-dark" *ngIf="!showForm" (click)="toggleForm()">
+      Déjanos tu comentario
+    </button>
+  </div>
+
+  <!-- 🔹 Formulario de creación -->
+  <div *ngIf="showForm" class="card mb-4 shadow-sm">
+    <div class="card-body">
+      <h4 class="card-title text-center mb-3">Nuevo comentario</h4>
+
+      <form (ngSubmit)="createComment()" #commentForm="ngForm">
+
+        <!-- Texto del comentario -->
+        <div class="mb-3">
+          <textarea class="form-control" [(ngModel)]="newComment.texto" name="texto"
+            placeholder="Escribe tu comentario..." required rows="3"></textarea>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="d-flex justify-content-end gap-2">
+          <button type="submit" class="btn btn-dark" [disabled]="!commentForm.valid">
+            Crear comentario
+          </button>
+
+          <button type="button" class="btn btn-dark" (click)="resetForm()">
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>

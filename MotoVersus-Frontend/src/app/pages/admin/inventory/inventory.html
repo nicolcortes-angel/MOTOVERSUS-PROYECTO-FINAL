@@ -1,0 +1,33 @@
+<h1>GESTIÓN DE PRODUCTOS</h1>
+
+<div class="container border border-black d-flex flex-wrap gap-5 p-4 border-3 rounded-4">
+  @for (product of allProducts; track $index) {
+  <div>
+    <h2 class="fa-bold">{{ product.nombre }}</h2>
+    <p><strong>Descripción:</strong> {{ product.descripcion }}</p>
+  <p><strong>Cilindraje:</strong> {{ product.cilindraje }}</p>
+  <p><strong>Motor:</strong> {{ product.motor }}</p>
+  <p><strong>Potencia:</strong> {{ product.potencia }}</p>
+  <p><strong>Transmisión:</strong> {{ product.transmision }}</p>
+  <p><strong>Peso:</strong> {{ product.peso }} kg</p>
+  <p><strong>Precio:</strong> {{ product.precio | currency:'USD':'symbol':'1.2-2' }}</p>
+  <p><strong>Categoría:</strong> {{ product.categoria }}</p>
+
+  <strong>Imagen:</strong><br>
+    <img [src]="'http://localhost:3000' + product.imagenUrl"
+  width="200" 
+  height="150"
+>
+
+      <button class="btn btn-info" (click)="updateProductsInfo(product._id)">Actualizar</button>
+      <button class="btn btn-danger" (click)="deleteProduct(product._id)">Eliminar</button>
+    
+
+  <!-- 🔸 Formulario solo aparece para el usuario seleccionado -->
+      @if (showUpdateForm && selectedProductId === product._id) {
+        <app-update-form-product [productId]="selectedProductId"></app-update-form-product>
+      }
+    </div>
+
+  }
+</div>

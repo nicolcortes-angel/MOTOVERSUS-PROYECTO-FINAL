@@ -1,0 +1,40 @@
+.card-hover {
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card-hover:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  transform: translateY(-8px) scale(1.03);
+}
+
+.text-white-links a {
+  color: white !important;
+  text-decoration: none;
+}
+
+.text-white-links a:hover {
+  text-decoration: underline;
+  color: #f8f9fa !important; /* Blanco clarito para hover */
+}
+
+.avatar-img {
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+.card-personalizada {
+  width: 24rem !important;
+  border-radius: 10%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){  
+  .card-personalizada {
+    width: 18rem !important;
+  }
+}
+
+@media (max-width: 575.98px) { 
+  .card-personalizada {
+    width: 18rem !important;
+  }
+}

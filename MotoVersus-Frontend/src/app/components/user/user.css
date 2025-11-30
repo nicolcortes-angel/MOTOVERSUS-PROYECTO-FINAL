@@ -1,0 +1,29 @@
+.card-hover {
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card-hover:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  transform: translateY(-8px) scale(1.03);
+}
+
+.text-white-links a {
+  color: white !important;
+  text-decoration: none;
+}
+
+.text-white-links a:hover {
+  text-decoration: underline;
+  color: #f8f9fa !important; /* Blanco clarito para hover */
+}
+.card-personalizada {
+  width: 30rem !important;
+  height: auto !important;
+  border-radius: 15%;
+  border: none !important; /* Elimina el borde */
+}
+.img-tamano{
+    height: 250px !important;
+    width: auto !important;
+    object-fit: cover !important;
+}

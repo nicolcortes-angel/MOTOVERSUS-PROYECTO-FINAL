@@ -1,0 +1,96 @@
+
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-texto, #072359);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+/* Línea decorativa debajo del título */
+h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--color-fondo, #446FF2);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Contenedor principal */
+.container {
+  justify-content: center;
+  background: var(--color-enfasis1);
+  border: 3px solid var(--color-enfasis, #4E8AD9);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Cada tarjeta de usuario */
+.usuariod {
+  background: var(--color-enfasis2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  width: 250px;
+  min-height: 180px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+/* Efecto hover: resalta la tarjeta */
+.usuariod:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-fondo, #446FF2);
+  box-shadow: 0 6px 18px rgba(68, 111, 242, 0.35);
+}
+
+/* Nombre del usuario */
+.usuariod h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-enfasis1, #1D2026);
+  margin-bottom: 0.5rem;
+}
+
+/* Username y correo */
+.usuariod p {
+  font-size: 0.95rem;
+  color: var(--color-texto, #072359);
+  margin: 0.2rem 0;
+}
+
+/* Botón eliminar */
+.btn-danger {
+  background-color: #e63946;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+/* Hover botón */
+.btn-danger:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(230, 57, 70, 0.4);
+}
+
+/* Formulario de actualización */
+app-update-form-user {
+  display: block;
+  margin-top: 1rem;
+  background: var(--color-enfasis2, #f8f9fa);
+  border-radius: 10px;
+  padding: 1rem;
+  border: 1px solid var(--color-enfasis, #4E8AD9);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+

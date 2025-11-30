@@ -1,0 +1,99 @@
+
+<header>
+  <!-- 2. usar el componente reutilizable con su selector -->
+  <!-- <app-navbar></app-navbar> -->
+
+</header>
+
+<!-- Main -->
+<main>
+
+
+
+  <div class="banner-container text-center text-white">
+    <img src="assets/portada.png" alt="Banner motos" class="banner-img">
+
+    <div class="banner-overlay d-flex flex-column align-items-center ">
+      <h2 class="banner-text">🔥 Vive la velocidad, siente la libertad 🔥</h2>
+      <a href="/" class="btn btn-danger">Explora Todas las Motos &gt;</a>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <div class="d-flex align-items-center justify-content-center gap-4 bg-light p-4 rounded">
+
+      <!-- Moto izquierda -->
+      <img src="assets/enduro-1.png" alt="Moto Enduro 1" class="img-fluid moto-img">
+
+      <!-- Texto y botón central -->
+      <div class="text-center">
+        <h6 class="fw-semibold mb-2">Descubre las motos enduro</h6>
+        <a href="/enduro" class="btn btn-dark px-4 py-2">ENDURO</a>
+      </div>
+
+      <!-- Moto derecha -->
+      <img src="assets/enduro-3.png" alt="Moto Enduro 2" class="img-fluid moto-img" />
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <div class="d-flex align-items-center justify-content-center gap-4 bg-light p-4 rounded">
+      <!-- Moto izquierda -->
+      <img
+        src="assets/Auteco_BET_ABS/GrisNardo.png"
+        alt="Moto Enduro 1"
+        class="img-fluid moto-img"
+      />
+
+      <!-- Texto y botón central -->
+      <div class="text-center">
+        <h6 class="fw-semibold mb-2">Descubre las motos Automaticas</h6>
+        <a href="/hibrida" class="btn btn-dark px-4 py-2">AUTOMATICAS</a>
+      </div>
+
+      <!-- Moto derecha -->
+      <img
+        src="assets/Auteco_NTORW/azulPetroleoDorado.png"
+        alt="Moto Enduro 2"
+        class="img-fluid moto-img"
+      />
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <div class="d-flex align-items-center justify-content-center gap-4 bg-light p-4 rounded">
+      <!-- Moto izquierda -->
+      <img src="assets/Deportivas/APRILA1.png" alt="Moto Enduro 1" class="img-fluid moto-img" />
+
+      <!-- Texto y botón central -->
+      <div class="text-center">
+        <h6 class="fw-semibold mb-2">Descubre las motos Deportivas</h6>
+        <a href="/deportivas" class="btn btn-dark px-4 py-2">DEPORTIVAS</a>
+      </div>
+
+      <!-- Moto derecha -->
+      <img src="assets/Deportivas/DUCATI1.png" alt="Moto Enduro 2" class="img-fluid moto-img" />
+    </div>
+
+        </div>
+
+  <div>
+<h2 class="d-flex justify-content-center my-5" >📜 Comentarios</h2>
+
+    <div>
+    <app-comment></app-comment>
+</div>
+  </div>
+<div class="comment-cta-container text-center my-5 p-5 rounded-4 border shadow-sm m-5">
+  <h2 class="fw-bold mb-3 text-dark">💭 ¡Queremos conocer tu opinión!</h2>
+  <p class="text-secondary mb-4">
+    Déjanos tu comentario y cuéntanos qué piensas sobre nuestras motos o tu experiencia.
+  </p>
+<div class="d-flex justify-content-center align-items-center text-center my-4">
+  <app-comment-create></app-comment-create>
+
+  </div>
+  </div>
+</main>
+<!-- Footer -->
+<footer></footer>

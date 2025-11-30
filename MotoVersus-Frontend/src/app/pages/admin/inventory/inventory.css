@@ -1,0 +1,169 @@
+/* Título principal */
+body {
+  font-family: 'Noto Serif Tangut', serif;
+  background-color: var(--color-enfasis2);
+  color: var(--color-texto);
+  margin: 0;
+  padding: 0;
+}
+
+/* ==== TÍTULO PRINCIPAL ==== */
+h1 {
+  text-align: center;
+  font-size: 2.3rem;
+  font-family: 'Badelosh Ralintesla', sans-serif;
+  font-weight: 700;
+  color: var(--color-enfasis1);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  background-color: var(--color-fondo);
+  margin: 0.5rem auto 0;
+  border-radius: 3px;
+}
+
+/* ==== CONTENEDOR PRINCIPAL ==== */
+.container {
+  justify-content: center;
+  background: var(--color-enfasis2);
+  border: 3px solid var(--color-enfasis);
+  border-radius: 20px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* ==== TARJETAS DE PRODUCTOS ==== */
+.container > div {
+  background: var(--color-enfasis2);
+  border-radius: 18px;
+  padding: 2rem;
+  width: 45%; 
+  min-height: 480px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  text-align: left;
+  overflow: hidden;
+  font-family: var(--texto-secundario);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Hover de la tarjeta */
+.container > div:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-fondo);
+  box-shadow: 0 10px 18px rgba(68, 111, 242, 0.35);
+}
+
+/* ==== NOMBRE DEL PRODUCTO ==== */
+.container h2 {
+  font-family: 'Badelosh Ralintesla', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-enfasis1);
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+/* ==== TEXTO GENERAL ==== */
+.container p {
+  font-family: 'Noto Serif Tangut', serif;
+  font-size: 0.95rem;
+  color: var(--color-texto);
+  margin: 0.3rem 0;
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* ==== ETIQUETAS STRONG ==== */
+.container strong {
+  color: var(--color-enfasis);
+  font-weight: 600;
+}
+
+/* ==== IMAGEN DEL PRODUCTO ==== */
+.container img {
+  margin: 0.8rem auto;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid var(--color-enfasis);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  max-width: 90%;
+  height: auto;
+}
+
+.container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(68, 111, 242, 0.5);
+}
+
+/* ==== CONTENEDOR DE BOTONES ==== */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* ==== BOTONES ==== */
+.btn {
+  margin: 0.4rem;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Badelosh Ralintesla', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* Botón actualizar */
+.btn-info {
+  background-color: var(--color-fondo);
+  color: var(--color-enfasis2);
+}
+
+.btn-info:hover {
+  background-color: var(--color-fondo);
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px rgba(52, 86, 195, 0.4);
+}
+
+/* Botón eliminar */
+.btn-danger {
+  background-color: var(--color-error);
+  color: var(--color-enfasis2);
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px rgba(230, 57, 70, 0.4);
+}
+
+/* ==== FORMULARIO DE ACTUALIZACIÓN ==== */
+app-update-form-product {
+  display: block;
+  margin-top: 1rem;
+  background: var(--color-enfasis2);
+  border-radius: 10px;
+  padding: 1rem;
+  border: 1px solid var(--color-enfasis);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}

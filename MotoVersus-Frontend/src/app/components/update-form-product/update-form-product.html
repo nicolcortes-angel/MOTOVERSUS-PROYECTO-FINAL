@@ -1,0 +1,119 @@
+<main>
+  <form [formGroup]="registerForm" (ngSubmit)="handleSubmit()" class="formulario">
+    <h1>Actualización de producto</h1>
+
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input 
+        type="text" 
+        class="form-control"
+        id="nombre"
+        formControlName="name"
+      >
+    </div>
+
+    <div class="mb-3">
+      <label for="descripcion" class="form-label">Descripción</label>
+      <input 
+        type="text" 
+        class="form-control"
+        id="descripcion"
+        formControlName="description"
+      >
+    </div>
+
+    <div class="mb-3">
+      <label for="cilindraje" class="form-label">Cilindraje</label>
+      <input 
+        type="number" 
+        class="form-control"
+        id="cilindraje"
+        formControlName="cilind"
+      >
+    </div>
+
+    <div class="mb-3">
+      <label for="motor" class="form-label">Motor</label>
+      <input 
+        type="text" 
+        class="form-control"
+        id="motor"
+        formControlName="motors"
+      >
+    </div>
+
+    <div class="mb-3">
+      <label for="potencia" class="form-label">Potencia</label>
+      <input 
+        type="text" 
+        class="form-control"
+        id="potencia"
+        formControlName="potence"
+      >
+    </div>
+
+    <div class="mb-3">
+      <label for="transmision" class="form-label">Transmisión</label>
+      <input 
+        type="text" 
+        class="form-control"
+        id="transmision"
+        formControlName="transmition"
+      >
+
+    </div>
+
+    <div class="mb-3">
+      <label for="peso" class="form-label">Peso</label>
+      <input 
+        type="number" 
+        class="form-control"
+        id="peso"
+        formControlName="size"
+      >
+    </div>
+
+    <div class="mb-3">
+      <label for="precio" class="form-label">Precio</label>
+      <input 
+        type="number" 
+        class="form-control"
+        id="precio"
+        formControlName="price"
+      >
+
+    </div>
+
+    <div class="mb-3">
+  <label for="imagenUrl" class="form-label">Imagen del producto</label>
+  <input 
+    type="file"
+    class="form-control"
+    id="imagenUrl"
+    (change)="onFileSelected($event)"
+    accept="image/*"
+  >
+
+  <!-- Vista previa de la imagen -->
+  @if (previewUrl) {
+  <div class="mt-3">
+    <p>Vista previa:</p>
+    <img [src]="previewUrl" alt="Vista previa de la imagen" class="img-fluid">
+  </div>
+  }
+</div>  
+
+
+    <div class="mb-3">
+      <label for="categoria" class="form-label">Categoría</label>
+      <input 
+        type="text" 
+        class="form-control"
+        id="categoria"
+        formControlName="category"
+      >
+    </div>
+
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+  </form>
+</main>

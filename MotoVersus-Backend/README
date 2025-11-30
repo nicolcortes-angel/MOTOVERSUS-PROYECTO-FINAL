@@ -1,0 +1,86 @@
+# 🏍️ Motoversus
+
+Galería web visual para comparar motos y tomar mejores decisiones de compra.
+
+## ✨ Descripción general
+
+Motoversus es una plataforma diseñada para personas nuevas en el mundo de las motos o quienes desean adquirir una moto por primera vez. Los usuarios pueden explorar imágenes, comparar características técnicas y precios de motos clasificadas en categorías: **Deportivas**, **Enduro** y **Automáticas**. El sistema facilita la decisión de compra a través de una experiencia visual y comparativa simple.
+## 🎯 Público Objetivo
+
+- Personas nuevas en el mundo de las motos 🤓
+- Usuarios que desean adquirir una moto por primera vez 🆕
+- Quienes buscan comparar modelos y precios de forma simple y visual 🔎
+
+## 🚀 Características principales
+
+- 📸 Galería de imágenes de motos organizada por categorías
+- 💸 Comparador visual de precios y características técnicas
+- 🔍 Filtros por tipo de moto: Deportivas, Enduro y Automáticas
+- 📋 Descripciones, especificaciones y rango de precios por modelo
+- 🧑‍💻 Interfaz pensada para usuarios sin experiencia previa en motos
+
+## 🏷️ Categorías disponibles
+
+- **Deportivas 🏁**: Motos de alta velocidad y diseño innovador
+- **Enduro 🌄**: Motos versátiles para uso mixto, aventura y rutas difíciles
+- **Automáticas 🛵**: Motos fáciles de manejar, ideales para ciudad y trayectos cortos
+
+
+## 📦 Requisitos previos
+
+- Node.js y NPM instalados
+- MongoDB local o remoto
+- Variables de entorno configuradas (`BD_URL` y `PORT`)
+- Dependencias principales:
+  - express
+  - mongoose
+  - dotenv
+  - multer
+  - JsonWebToken
+  - nodemon (desarrollo)
+
+## 💡 ¿Cómo comenzar?
+
+1. **Clona el repositorio**
+
+git clone <URL_DEL_REPOSITORIO>
+cd motoversus-backend
+
+2. **Instala dependencias**
+
+npm install
+
+3. **Configura el archivo `.env`**
+
+BD_URL=<tu_ruta_de_mongodb> **--la cual se te debio compartir previamente--**
+PORT=3000
+
+4. **Inicia el servidor**
+- Para desarrollo:
+    npm run dev
+
+- Para producción:
+    npm start
+
+5. **Verificación**
+- Accede a `http://localhost:3000` (o el puerto configurado) y verifica el mensaje de bienvenida.
+
+
+## 🗃️ Modelado de datos
+
+- **Usuario**: nombre, apellido, usuario, contraseña, correo, número
+- **Producto**: nombre, cilindraje, motor, potencia, transmisión, peso, precio, imagen, categoría
+- **Comentario**: texto, usuario, fecha, calificación
+
+
+## 👥 Autores
+
+- Duvan Arroyave
+- Nicol Cortes
+- Duwar Rippe
+
+## 📧 Información de contacto
+
+https://github.com/dharroyave
+https://github.com/Duwar
+https://github.com/nicolcortes-angel
