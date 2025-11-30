@@ -1,21 +1,44 @@
 services:
+  # === 1. SERVICIO BACKEND ===
   backend:
-    build: ./
+    # Contexto apunta a la carpeta del Backend
+    build: 
+      context: ./Motoverus-Backend 
+    
     image: mi-backend:latest
-    container_name: backend_bit
+    container_name: backend_bit # Usamos el nombre que definiste
     restart: unless-stopped
     ports:
       - "3000:3000"
+    # Ajusta la ruta a tu archivo .env
     env_file:
-      - .env
+      - ./Motoverus-Backend/.env # Asegúrate que la ruta al .env es correcta
+      
+  # === 2. SERVICIO FRONTEND (AGREGADO) ===
+  frontend:
+    # Contexto apunta a la carpeta del Frontend
+    build:
+      context: ./Motoverus-Frontend 
+    
+    image: mi-frontend:latest
+    container_name: frontend_motoverus_1 # Nombre del contenedor del frontend
+    restart: unless-stopped
+    
+    ports:
+      # Mapeamos el puerto 80 (Nginx interno) del contenedor al 4200 del host
+      - "4200:80" 
+      
+    depends_on:
+      - backend # Asegura que el backend esté listo primero
 
+  # === 3. SERVICIO NGINX PROXY MANAGER ===
   nginxproxymanager:
     image: 'jc21/nginx-proxy-manager:latest'
     container_name: nginxproxymanager
     restart: unless-stopped
     ports:
       - "80:80"
-      - "81:81"      # Panel de admin
+      - "81:81"     # Panel de admin
       - "443:443"
     volumes:
       - ./nginx/data:/data
