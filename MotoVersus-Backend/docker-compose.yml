@@ -2,7 +2,7 @@ services:
   backend:
     build: ./
     image: mi-backend:latest
-    container_name: backend_motoversus
+    container_name: backend_motoversus_1
     restart: unless-stopped
     ports:
       - "3000:3000"
@@ -15,10 +15,11 @@ services:
     container_name: nginxproxymanager
     restart: unless-stopped
     ports:
-    - "80:80"
-    - "81:81"    # panel de admin
-    - "443:443"
+      
+      - "80:80"
+      - "81:81"    # panel de admin
+      - "443:443"
 
 volumes:
-  - ./nginx/data:/data
-  - ./nginx/letsencrypt:/etc/letsencrypt
+     - ./nginx/data:/data
+     - ./nginx/letsencrypt:/etc/letsencrypt
