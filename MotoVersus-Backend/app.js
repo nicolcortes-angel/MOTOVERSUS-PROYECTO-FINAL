@@ -20,8 +20,14 @@ const _dirname = path.dirname(_filename);
 
 
 //3. funcionalidad para conectar a la base de datos
-app.get('/', (request, response) => {
-    response.send('Bienvenido a MotoVersus');
+// app.get('/', (request, response) => {
+//     response.send('Bienvenido a MotoVersus');
+// });
+
+app.use(express.static(path.join(_dirname, "dist", "frontend", "browser")));
+
+app.get(/.*/, (req, res) => {
+  res.sendFile(path.join(_dirname, "dist", "frontend", "browser", "index.html"));
 });
 
 app.use(cors()); // Middleware para habilitar CORS

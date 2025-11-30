@@ -1,6 +1,6 @@
 services:
   frontend:
-    build: ./frontend/
+    build: ./
     image: mi-frontend:latest
     container_name: angular_frontend
     ports:
