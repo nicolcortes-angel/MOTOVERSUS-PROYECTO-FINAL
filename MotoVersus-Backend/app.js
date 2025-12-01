@@ -24,11 +24,6 @@ const _dirname = path.dirname(_filename);
 //     response.send('Bienvenido a MotoVersus');
 // });
 
-app.use(express.static(path.join(_dirname, "dist", "frontend", "browser")));
-
-app.get(/.*/, (req, res) => {
-  res.sendFile(path.join(_dirname, "dist", "frontend", "browser", "index.html"));
-});
 
 app.use(cors()); // Middleware para habilitar CORS
 app.use(express.json()); // Middleware para parsear JSON
@@ -38,7 +33,15 @@ app.use("/products", productRouter);
 app.use("/login", loginRouter);
 app.use("/uploads", express.static(path.join(_dirname, "src/uploads")));
 
+app.use(express.static(path.join(_dirname, "dist", "frontend", "browser")));
+
+app.get(/.*/, (req, res) => {
+  res.sendFile(path.join(_dirname, "dist", "frontend", "browser", "index.html"));
+});
+
 //4. Levantamos el servidor
 app.listen(PORT, () => {
     console.log(`Servidor ejecutandose en el http://localhost:${PORT}`);
 });
+
+
